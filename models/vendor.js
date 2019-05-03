@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 // create a schema
-const hrAccountSchema = new Schema({
+const vendorSchema = new Schema({
   name: {
     type: [String, 'Only alphanumeric characters allowed!'],
     min: [4, 'Minimum 4 characters!'],
@@ -23,7 +23,7 @@ const hrAccountSchema = new Schema({
     required: [true, 'Fill the address field, please!'],
     unique: [true, 'email is already exist!']
   },
-  phone: {
+  email: {
     type: [Number, 'Only alphanumeric characters allowed!'],
     min: [4, 'Minimum 4 characters!'],
     max: [14, 'Maximum 14 characters!'],
@@ -33,4 +33,4 @@ const hrAccountSchema = new Schema({
 });
 
 // exports the model
-module.exports = mongoose.model('HrAccount', hrAccountSchema);
+module.exports = mongoose.model('Vendor', vendorSchema);

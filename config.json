@@ -1,0 +1,4 @@
+{
+  "DB_LOCAL": "mongodb://localhost/mhc",
+  "PORT": 8000
+}
