@@ -1,10 +1,10 @@
 // setting prerequisites
 require('dotenv').config();
 
-import express from 'express';
-import morgan from 'morgan';
-import mongoose from 'mongoose';
-import cors from 'cors';
+const express = require('express'),
+  morgan = require('morgan'),
+  mongoose = require('mongoose'),
+  cors = require('cors');
 
 // middlewares
 const app = express();

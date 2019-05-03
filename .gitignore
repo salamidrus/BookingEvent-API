@@ -1,4 +1,5 @@
 .eslintrc.json
 .prettierrc
 .env
+.babelrc
 node_modules/
