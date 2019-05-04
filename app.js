@@ -6,6 +6,10 @@ const express = require('express'),
   mongoose = require('mongoose'),
   cors = require('cors');
 
+// routes import
+const vendorRoutes = require('./routes/vendor'),
+  eventRoutes = require('./routes/event');
+
 // middlewares
 const app = express();
 app
@@ -14,10 +18,13 @@ app
   .use(express.urlencoded({ extended: false }))
   .use(cors());
 
-// routes
-app.get('/', (req, res) => {
-  res.send('Welcome to MHC API!');
-});
+// access routes
+app
+  .get('/', (req, res) => {
+    res.send('Welcome to MHC API!');
+  })
+  .use('/api/v1/vendor', vendorRoutes)
+  .use('/api/v1/event', eventRoutes);
 
 // error handler
 app.use((err, req, res) => {

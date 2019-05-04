@@ -5,10 +5,10 @@ const { Schema } = mongoose;
 const eventSchema = new Schema(
   {
     name: {
-      type: [String, 'Only alphanumeric characters allowed'],
-      min: [4, 'Minimum 4 characters'],
-      max: [20, 'Maximum 20 characters'],
-      required: [true, 'Fill the name field, please']
+      type: String,
+      min: 4,
+      max: 20,
+      required: true
     },
     vendorId: { type: String }
   },
