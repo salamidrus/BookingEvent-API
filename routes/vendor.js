@@ -9,6 +9,6 @@ const eventController = require('../controllers/event');
 // routes list
 router.post('/signup', vendorController.Create);
 router.post('/create', auth, eventController.Create);
-router.get('/getall', auth, eventController.GetAll);
+router.get('/getevents', auth, eventController.GetAll);
 
 module.exports = router;
