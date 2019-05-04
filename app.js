@@ -9,7 +9,7 @@ const express = require('express'),
 
 // routes import
 const vendorRoutes = require('./routes/vendor'),
-  eventRoutes = require('./routes/event'),
+  hrAccountRoutes = require('./routes/hrAccount'),
   loginRoutes = require('./routes/login');
 
 // middlewares
@@ -28,7 +28,7 @@ app
     res.send('Welcome to MHC API!');
   })
   .use('/api/v1/vendor', vendorRoutes)
-  .use('/api/v1/event', eventRoutes)
+  .use('/api/v1/hraccount', hrAccountRoutes)
   .use('/api/v1/login', loginRoutes);
 
 // error handler

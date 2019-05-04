@@ -10,7 +10,7 @@ const eventSchema = new Schema(
       max: 20,
       required: true
     },
-    vendorId: { type: String }
+    vendorId: { type: Schema.Types.ObjectId, ref: 'Vendor' }
   },
   { timestamps: true }
 );

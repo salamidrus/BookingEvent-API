@@ -1,14 +1,14 @@
-// passport config
-require('../middleware/passport');
+// authorization
+const auth = require('../middleware/auth').isAuthenticated;
 
 // import modules
 const vendorController = require('../controllers/vendor');
 const router = require('express').Router();
-const passport = require('passport');
-const passportVendor = passport.authenticate('vendor', { session: false });
-const passportJWT = passport.authenticate('jwt', { session: false });
+const eventController = require('../controllers/event');
 
 // routes list
 router.post('/signup', vendorController.Create);
+router.post('/create', auth, eventController.Create);
+router.get('/getall', auth, eventController.GetAll);
 
 module.exports = router;

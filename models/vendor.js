@@ -16,17 +16,17 @@ const vendorSchema = new Schema(
     email: {
       type: String,
       min: 4,
-      max: 50,
+      max: 20,
       required: true,
       unique: true
     },
     password: {
       type: String,
       min: 4,
-      max: 50,
+      max: 20,
       required: true
     },
-    eventId: [{ type: Schema.Types.ObjectId, ref: 'Event', default: null }],
+    eventId: [{ type: Schema.Types.ObjectId, ref: 'Event' }],
     address: {
       type: String,
       min: 4,
@@ -37,6 +37,7 @@ const vendorSchema = new Schema(
   { timestamps: true }
 );
 
+// hash password
 vendorSchema.pre('save', function(next) {
   this.email = this.email.toLowerCase();
   this.password = bcrypt.hashSync(this.password, saltRounds);

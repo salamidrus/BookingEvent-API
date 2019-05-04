@@ -38,49 +38,39 @@ signTokenHrAccount = user => {
   );
 };
 
-exports.Login = (req, res) => {
-  const vendor = Vendor.findOne({ email: req.body.email });
-  const hrAccount = HrAccount.findOne({ email: req.body.email });
+exports.Login = async (req, res) => {
+  console.log(req.body);
+  const vendor = await Vendor.findOne({ email: req.body.email });
+  const hrAccount = await HrAccount.findOne({ email: req.body.email });
+  console.log(hrAccount);
   if (vendor) {
-    vendor
-      .then(user => {
-        bcrypt.compare(req.body.password, user.password).then(result => {
-          if (result) {
-            const token = signTokenVendor(vendor);
-            return res.status(200).json({
-              message: 'Succesfully logged in!',
-              token: token
-            });
-          } else {
-            return res.status(400).json({
-              message: 'Wrong Password'
-            });
-          }
+    bcrypt.compare(req.body.password, vendor.password).then(result => {
+      if (result) {
+        const token = signTokenVendor(vendor);
+        return res.status(200).json({
+          message: 'Succesfully logged in!',
+          token: token
         });
-      })
-      .catch(err => {
-        res.status(400).json({ message: err.message });
-      });
+      } else {
+        return res.status(400).json({
+          message: 'Wrong Password'
+        });
+      }
+    });
   } else if (hrAccount) {
-    hrAccount
-      .then(user => {
-        bcrypt.compare(req.body.password, user.password).then(result => {
-          if (result) {
-            const token = signTokenHrAccount(hrAccount);
-            return res.status(200).json({
-              message: 'Succesfully logged in!',
-              token: token
-            });
-          } else {
-            return res.status(400).json({
-              message: 'Wrong Password'
-            });
-          }
+    bcrypt.compare(req.body.password, hrAccount.password).then(result => {
+      if (result) {
+        const token = signTokenHrAccount(hrAccount);
+        return res.status(200).json({
+          message: 'Succesfully logged in!',
+          token: token
         });
-      })
-      .catch(err => {
-        res.status(400).json({ message: err.message });
-      });
+      } else {
+        return res.status(400).json({
+          message: 'Wrong Password'
+        });
+      }
+    });
   } else {
     return res.status(400).json({
       success: false,
