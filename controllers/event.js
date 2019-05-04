@@ -37,3 +37,20 @@ exports.GetAll = (req, res) => {
       });
     });
 };
+
+exports.GetById = (req, res) => {
+  const id = req.params.id;
+  Event.find({ _id: id })
+    .then(data => {
+      res.status(200).json({
+        success: true,
+        data
+      });
+    })
+    .catch(err => {
+      res.status(400).json({
+        success: false,
+        err: err.message
+      });
+    });
+};
