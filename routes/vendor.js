@@ -13,6 +13,6 @@ const eventController = require('../controllers/event');
 router.post('/signup', vendorController.Create);
 router.post('/create', auth, eventController.Create);
 router.get('/getevents', auth, eventController.GetAll);
-router.get('/getevents/:id', auth, eventController.GetById);
+router.get('/getevents/:id', auth, eventController.GetByIdVendor);
 
 module.exports = router;

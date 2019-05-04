@@ -13,7 +13,7 @@ signTokenVendor = user => {
   return JWT.sign(
     {
       iss: 'MHC',
-      sub: user._id,
+      id: user._id,
       email: user.email,
       iat: new Date().getTime(),
       exp: new Date().setDate(new Date().getDate() + 1),
@@ -28,7 +28,7 @@ signTokenHrAccount = user => {
   return JWT.sign(
     {
       iss: 'MHC',
-      sub: user.id,
+      id: user.id,
       email: user.email,
       iat: new Date().getTime(),
       exp: new Date().setDate(new Date().getDate() + 1),
