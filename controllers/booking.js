@@ -1,3 +1,4 @@
+// import schema
 const Booking = require('../models/booking');
 
 exports.Create = (req, res) => {

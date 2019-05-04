@@ -1,3 +1,4 @@
+// import schema
 const Event = require('../models/event');
 const Vendor = require('../models/vendor');
 const mongoose = require('mongoose');
@@ -65,8 +66,9 @@ exports.GetById = (req, res) => {
 };
 
 exports.GetByIdVendor = (req, res) => {
-  id = req.params.id;
-  Event.find({ vendorId: req.params.id })
+  const id = mongoose.Types.ObjectId(req.decoded.id);
+  Event.findOne({ vendorId: id })
+    .exec()
     .then(data => {
       res.status(200).json({
         success: true,
