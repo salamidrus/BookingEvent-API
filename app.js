@@ -4,11 +4,13 @@ require('dotenv').config();
 const express = require('express'),
   morgan = require('morgan'),
   mongoose = require('mongoose'),
-  cors = require('cors');
+  cors = require('cors'),
+  passport = require('passport');
 
 // routes import
 const vendorRoutes = require('./routes/vendor'),
-  eventRoutes = require('./routes/event');
+  eventRoutes = require('./routes/event'),
+  loginRoutes = require('./routes/login');
 
 // middlewares
 const app = express();
@@ -16,7 +18,9 @@ app
   .use(morgan('dev'))
   .use(express.json())
   .use(express.urlencoded({ extended: false }))
-  .use(cors());
+  .use(cors())
+  .use(passport.initialize())
+  .use(passport.session());
 
 // access routes
 app
@@ -24,7 +28,8 @@ app
     res.send('Welcome to MHC API!');
   })
   .use('/api/v1/vendor', vendorRoutes)
-  .use('/api/v1/event', eventRoutes);
+  .use('/api/v1/event', eventRoutes)
+  .use('/api/v1/login', loginRoutes);
 
 // error handler
 app.use((err, req, res) => {

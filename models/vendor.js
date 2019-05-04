@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 // create a schema
 const vendorSchema = new Schema(
@@ -35,5 +37,10 @@ const vendorSchema = new Schema(
   { timestamps: true }
 );
 
+vendorSchema.pre('save', function(next) {
+  this.email = this.email.toLowerCase();
+  this.password = bcrypt.hashSync(this.password, saltRounds);
+  next();
+});
 // exports the model
 module.exports = mongoose.model('Vendor', vendorSchema);
