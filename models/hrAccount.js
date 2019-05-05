@@ -6,7 +6,7 @@ const saltRounds = 10;
 // create a schema
 const hrAccountSchema = new Schema(
   {
-    name: {
+    companyName: {
       type: String,
       min: 4,
       max: 20,

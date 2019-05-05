@@ -39,10 +39,8 @@ signTokenHrAccount = user => {
 };
 
 exports.Login = async (req, res) => {
-  console.log(req.body);
   const vendor = await Vendor.findOne({ email: req.body.email });
   const hrAccount = await HrAccount.findOne({ email: req.body.email });
-  console.log(hrAccount);
   if (vendor) {
     bcrypt.compare(req.body.password, vendor.password).then(result => {
       if (result) {
