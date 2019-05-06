@@ -13,7 +13,8 @@ exports.Create = (req, res) => {
     .catch(err => {
       res.status(400).json({
         success: false,
-        err: err.message || 'Cannot create HR account'
+        message: 'Cannot create HR account',
+        err: err.message
       });
     });
 };
