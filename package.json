@@ -6,7 +6,6 @@
   "scripts": {
     "test": "NODE_ENV=test mocha --timeout=3000 --recursive ./test --exit",
     "dev": "nodemon app.js || true",
-    "build": "babel src -d lib",
     "start": "NODE_ENV=production node app.js",
     "coverage": "nyc --reporter html --reporter text npm test"
   },
