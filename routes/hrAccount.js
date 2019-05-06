@@ -11,8 +11,9 @@ const bookingController = require('../controllers/booking');
 
 // routes list
 router.post('/signup', hrAccountController.Create);
-router.get('/getevents', auth, eventController.GetAll);
-router.get('/getevents/:id', auth, eventController.GetById);
+router.get('/event/getevents', auth, eventController.GetAll);
+router.get('/event/getevents/:id', auth, eventController.GetById);
+router.get('/event/getgroupedevents', auth, eventController.showGroupedEvents);
 router.post('/booking', auth, bookingController.Create);
 router.get('/booking/getall', auth, bookingController.GetAll);
 router.get('/booking/get', auth, bookingController.GetbyHrId);

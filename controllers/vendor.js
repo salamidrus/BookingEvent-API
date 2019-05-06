@@ -6,6 +6,7 @@ exports.Create = (req, res) => {
     .then(data => {
       res.status(200).json({
         success: true,
+        message: 'Account created',
         data
       });
     })

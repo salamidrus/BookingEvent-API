@@ -16,7 +16,7 @@ signTokenVendor = user => {
       id: user._id,
       email: user.email,
       iat: new Date().getTime(),
-      exp: new Date().setDate(new Date().getDate() + 1),
+      exp: new Date().setDate(new Date().getDate() + 7),
       role: 'vendor'
     },
     JWT_SECRET
@@ -31,7 +31,7 @@ signTokenHrAccount = user => {
       id: user.id,
       email: user.email,
       iat: new Date().getTime(),
-      exp: new Date().setDate(new Date().getDate() + 1),
+      exp: new Date().setDate(new Date().getDate() + 7),
       role: 'hrAccount'
     },
     JWT_SECRET
