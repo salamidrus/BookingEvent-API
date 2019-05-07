@@ -115,6 +115,51 @@ exports.GetByIdVendor = (req, res) => {
     });
 };
 
+exports.Update = (req, res) => {
+  const vendorId = mongoose.Types.ObjectId(req.decoded.id);
+  const eventId = req.params.id;
+
+  Event.findOne({ vendorId: vendorId })
+    .then(vendor => {
+      if (!vendor) {
+        return res.status(400).json({
+          success: false,
+          message: "You haven't created any event"
+        });
+      } else {
+        Event.findOneAndUpdate({ _id: eventId }, { $set: req.body })
+          .then(data => {
+            if (!data) {
+              return res.status(400).json({
+                success: false,
+                message: 'Event is not found'
+              });
+            } else {
+              return res.status(200).json({
+                success: true,
+                message: 'Event successfully deleted!',
+                data
+              });
+            }
+          })
+          .catch(err => {
+            res.status(400).json({
+              success: false,
+              message: 'Event is not found',
+              err: err.message
+            });
+          });
+      }
+    })
+    .catch(err => {
+      res.status(400).json({
+        success: false,
+        message: 'Vendor is not registered',
+        err: err.message
+      });
+    });
+};
+
 exports.Delete = (req, res) => {
   const vendorId = mongoose.Types.ObjectId(req.decoded.id);
   const eventId = req.params.id;

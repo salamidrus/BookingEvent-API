@@ -4,8 +4,7 @@ require('dotenv').config();
 const express = require('express'),
   morgan = require('morgan'),
   mongoose = require('mongoose'),
-  cors = require('cors'),
-  passport = require('passport');
+  cors = require('cors');
 
 // routes import
 const vendorRoutes = require('./routes/vendor'),
@@ -19,8 +18,6 @@ app
   .use(express.json())
   .use(express.urlencoded({ extended: false }))
   .use(cors())
-  .use(passport.initialize())
-  .use(passport.session())
   .use(express.static('public'));
 
 // access routes
