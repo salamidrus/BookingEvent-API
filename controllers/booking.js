@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 // import schema
 const Booking = require('../models/booking');
 const HrAccount = require('../models/hrAccount');
-const Vendor = require('../models/vendor');
 
 exports.Create = (req, res) => {
   let booking = new Booking({
