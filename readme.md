@@ -126,6 +126,8 @@ This project is provided by Unit Testing, and the dependencies are:
 
 ## Unit Testing Coverage
 
+![GetCoverage](https://res.cloudinary.com/drovood07/image/upload/v1557220864/Screen_Shot_2019-05-07_at_4.20.48_PM_nfksqu.png)
+
 This is the coverage, as a result of all functional codes:
 
 - [Coverage](https://reddit-in.herokuapp.com/coverage/)
