@@ -4,7 +4,7 @@ The idea for the project is creating web-based application to provide wellness e
 
 # Database Schema
 
-This project uses NoSql database, mongoDB, and you can see the full details of database scheme including validator and sample data in [here]()
+This project uses NoSql database, mongoDB, and you can see the full details of database scheme including validator and sample data in [here](https://mhc-wellness.herokuapp.com/erd.html)
 
 # Setting Prerequisites
 
