@@ -14,7 +14,7 @@ const bookingSchema = new Schema(
     responseDate: { type: String, default: null },
     date: [{ type: Date }],
     confirmedDate: { type: Date, default: null },
-    remarks: { type: String, default: null }
+    remarks: { type: String, min: 4, max: 50, default: null }
   },
   { timestamps: true }
 );

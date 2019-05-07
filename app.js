@@ -20,7 +20,8 @@ app
   .use(express.urlencoded({ extended: false }))
   .use(cors())
   .use(passport.initialize())
-  .use(passport.session());
+  .use(passport.session())
+  .use(express.static('public'));
 
 // access routes
 app
@@ -49,7 +50,7 @@ if (process.env.NODE_ENV === 'test') {
   mongoose.connect(DB_TEST, { useNewUrlParser: true });
 } else {
   mongoose
-    .connect(DB_URI, { useNewUrlParser: true })
+    .connect(DB_LOCAL, { useNewUrlParser: true })
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 }

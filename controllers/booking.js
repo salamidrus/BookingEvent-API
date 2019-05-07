@@ -102,6 +102,7 @@ exports.GetbyHrId = (req, res) => {
 
 exports.GetbyVendorId = (req, res) => {
   const vendorId = mongoose.Types.ObjectId(req.decoded.id);
+  console.log(vendorId);
   Booking.find({})
     .populate('eventId')
     .then(data => {
@@ -117,9 +118,9 @@ exports.GetbyVendorId = (req, res) => {
         });
       } else {
         data.forEach(books => {
+          console.log(books);
           return books.eventId.vendorId === vendorId;
         });
-
         return res.status(200).json({
           success: true,
           message: 'Showing your books lists',

@@ -67,6 +67,7 @@ exports.GetById = (req, res) => {
   Event.find({ _id: id })
     .populate('vendorId', 'id')
     .populate('vendorId', 'name')
+    .exec()
     .then(data => {
       if (!data) {
         return res.status(400).json({

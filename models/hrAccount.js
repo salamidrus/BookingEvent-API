@@ -18,6 +18,7 @@ const hrAccountSchema = new Schema(
       min: 4,
       max: 20,
       required: true,
+      match: /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/,
       unique: true
     },
     password: {
