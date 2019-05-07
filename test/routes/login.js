@@ -13,15 +13,15 @@ chai.use(chaiHttp);
 mocha.describe('Login HR Routes', () => {
   before(done => {
     HrAccount.create({
-      companyName: 'PT Glints Indonesia, Tbk. ',
-      email: 'glints@indonesia.com',
-      password: 'glints123',
+      companyName: 'PT Glints Indonesia2, Tbk. ',
+      email: 'glints2@indonesia.com',
+      password: 'glints1232',
       address: {
-        city: 'Kota Jakarta Selatan',
-        streetName: 'Jl. Nongsa No. 24 Blok VII',
-        postalCode: '294465'
+        city: 'Kota Jakarta Selatan2',
+        streetName: 'Jl. Nongsa No. 24 Blok VII2',
+        postalCode: '2944652'
       },
-      phone: '07387486946'
+      phone: '073874869462'
     }) // create HR account sample
       .then(user => {
         const objUser = {
@@ -40,8 +40,8 @@ mocha.describe('Login HR Routes', () => {
       .request(app)
       .post('/api/v1/login')
       .send({
-        email: 'glints@indonesia.com',
-        password: 'glints123'
+        email: 'glints2@indonesia.com',
+        password: 'glints1232'
       })
       .end((err, res) => {
         expect(err).to.be.null;
@@ -58,10 +58,10 @@ mocha.describe('Login HR Routes', () => {
 mocha.describe('Login Vendor Routes', () => {
   before(done => {
     Vendor.create({
-      name: 'Idrus Productions Ltd.',
-      email: 'idrus@test.com',
-      password: 'idrus123',
-      address: 'Rusun BPJS'
+      name: 'Idrus2 Productions Ltd.',
+      email: 'idrus2@test.com',
+      password: 'idrus1232',
+      address: 'Rusun BPJS2'
     }) // create Vendor account sample
       .then(user => {
         const objUser = {
@@ -80,8 +80,8 @@ mocha.describe('Login Vendor Routes', () => {
       .request(app)
       .post('/api/v1/login')
       .send({
-        email: 'idrus@test.com',
-        password: 'idrus123'
+        email: 'idrus2@test.com',
+        password: 'idrus1232'
       })
       .end((err, res) => {
         expect(err).to.be.null;

@@ -123,8 +123,8 @@ mocha.describe('Vendor Routes', () => {
         expect(res.body)
           .to.have.property('data')
           .to.be.an('Array');
+        done();
       });
-    done();
   });
   mocha.it('Successfully get event by Id', done => {
     chai
@@ -143,8 +143,8 @@ mocha.describe('Vendor Routes', () => {
         expect(res.body)
           .to.have.property('data')
           .to.be.an('Array');
+        done();
       });
-    done();
   });
   mocha.it('Successfully get event by vendor Id', done => {
     chai
@@ -160,8 +160,8 @@ mocha.describe('Vendor Routes', () => {
         expect(res.body)
           .to.have.property('data')
           .to.be.an('Array');
+        done();
       });
-    done();
   });
   mocha.it('Successfully delete event', done => {
     chai
@@ -174,11 +174,9 @@ mocha.describe('Vendor Routes', () => {
         expect(res.body)
           .to.have.property('message')
           .that.equal('Event successfully deleted!');
-        expect(res.body)
-          .to.have.property('data')
-          .to.be.an('Array');
+        expect(res.body).to.have.property('data');
+        done();
       });
-    done();
   });
   mocha.it('Successfully get booking by vendor Id', function() {
     this.skip();
