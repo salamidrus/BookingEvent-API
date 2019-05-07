@@ -71,7 +71,7 @@ Input 3 proposed dates and choosen event ID. The response will give the created 
 ![Show Booked Event](https://res.cloudinary.com/drovood07/image/upload/v1557211234/Screen_Shot_2019-05-07_at_1.40.04_PM_zjfw7k.png)
 ![Show Booked Event](https://res.cloudinary.com/drovood07/image/upload/v1557211326/Screen_Shot_2019-05-07_at_1.41.49_PM_kdifkf.png)
 
-Give response of booked event data and show the by stored Hr Id Field.
+Give response of booked event data and show the data by stored Hr Id Field.
 
 **Vendor**
 
