@@ -130,7 +130,7 @@ This project is provided by Unit Testing, and the dependencies are:
 
 This is the coverage, as a result of all functional codes:
 
-- [Coverage](https://reddit-in.herokuapp.com/coverage/)
+- [Coverage](https://mhc-wellness.herokuapp.com/coverage/)
 
 ## Backend Dependencies
 
