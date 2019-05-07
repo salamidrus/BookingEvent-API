@@ -93,7 +93,7 @@ exports.GetById = (req, res) => {
 
 exports.GetByIdVendor = (req, res) => {
   const id = mongoose.Types.ObjectId(req.decoded.id);
-  Event.findOne({ vendorId: id })
+  Event.find({ vendorId: id })
     .exec()
     .then(data => {
       if (!data) {

@@ -1,21 +1,27 @@
-# Reddit Clone - In-memory
+# MHC - Wellness Event Booking Application
 
-The idea for the project is creating reddis/digg website clone with NodeJs.
+The idea for the project is creating web-based application to provide wellness event booking between vendors and company users with NodeJS
 
-# Prerequisites
+# Database Schema
+
+This project uses NoSql database, mongoDB, and you can see the full details of database scheme including validator and sample data in [here]()
+
+# Setting Prerequisites
 
 This project require [NodeJS](https://nodejs.org/) to run
 
 To install:
 
 ```
-$ git clone https://github.com/salamidrus/reddit-data-structures.git
-$ cd reddit-in-memory
+$ git clone git@bitbucket.org:idrusandwinata/backend.git
+$ cd MHC-Wellness
 $ npm install or yarn install
 $ npm start or yarn start
 ```
 
 # Unit Testing Dependencies
+
+This project is provided by Unit Testing, and the dependencies are:
 
 - [chai](https://www.chaijs.com/)
 - [chai-http](https://www.chaijs.com/plugins/chai-http/)
@@ -26,19 +32,34 @@ $ npm start or yarn start
 
 # Unit Testing Coverage
 
+This is the coverage, as a result of all functional codes:
+
 - [Coverage](https://reddit-in.herokuapp.com/coverage/)
 
 # Backend Dependencies
 
+The framework and packages used are listed below:
+
 - [express](https://www.express.com/)
+- [mongoose](https://mongoosejs.com)
+- [bcrypt](https://www.npmjs.com/package/bcrypt)
+- [cors](https://www.npmjs.com/package/bcrypt)
+- [morgan](https://www.npmjs.com/package/morgan)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+
+NOTE: please open `config.json` file to access the environment variable
 
 # Deployment
 
-- [Reddit Heroku](https://reddit-in.herokuapp.com/test)
+This project is deployed to Heroku web server, you can access all of the API below:
+
+- [MHC Wellness Heroku](https://mhc-wellness.herokuapp.com)
 
 # Documentation
 
-- [Reddit Documentation](https://documenter.getpostman.com/view/6658461/S1Lr5XDt#2b35ee8a-93ec-48cd-a8bd-f012aa714301)
+The documentation for this project can be found here and if you use [Postman](https://www.getpostman.com/) you can directly run all of the API within the environment
+
+- [MHC Wellness Documentation](https://documenter.getpostman.com/view/6658461/S1LsZr4e#3a1a78ed-1537-44f1-8466-9987acdc3967)
 
 # License
 

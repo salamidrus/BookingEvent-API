@@ -50,7 +50,7 @@ if (process.env.NODE_ENV === 'test') {
   mongoose.connect(DB_TEST, { useNewUrlParser: true });
 } else {
   mongoose
-    .connect(DB_LOCAL, { useNewUrlParser: true })
+    .connect(DB_URI, { useNewUrlParser: true })
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 }

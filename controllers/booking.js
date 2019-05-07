@@ -106,18 +106,13 @@ exports.GetbyVendorId = (req, res) => {
   Booking.find({})
     .populate('eventId')
     .then(data => {
-      if (!data) {
-        return res.status(400).json({
-          success: false,
-          message: 'Your book lists are not found'
-        });
-      } else if (data == null) {
+      if (data.length == 0) {
         return res.status(200).json({
           success: true,
           message: "You haven't got any book"
         });
       } else {
-        data.forEach(books => {
+        data.map(books => {
           console.log(books);
           return books.eventId.vendorId === vendorId;
         });
