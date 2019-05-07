@@ -98,7 +98,7 @@ Give response of booked event data and show the by stored Vendor Id Field.
    ![Update Status req](https://res.cloudinary.com/drovood07/image/upload/v1557212685/Screen_Shot_2019-05-07_at_2.04.23_PM_cfrdb4.png)
    ![Update Status res](https://res.cloudinary.com/drovood07/image/upload/v1557212737/Screen_Shot_2019-05-07_at_2.05.20_PM_zrglqo.png)
 
-Give a response of updated booking data. If status 'Rejected', Vendor must fill the 'remarks' field to give the reason. If 'approved', choosen date from 'Date' (proposed dates) will be stored in'confirmedDated'
+Give a response of updated booking data. If status 'Rejected', Vendor must fill the 'remarks' field to give the reason. If 'approved', choosen date from 'Date' (proposed dates) will be stored in 'confirmedDated'
 
 ## Setting Prerequisites
 
@@ -143,7 +143,7 @@ The framework and packages used are listed below:
 - [morgan](https://www.npmjs.com/package/morgan)
 - [dotenv](https://www.npmjs.com/package/dotenv)
 
-NOTE: please open `config.json` file to access the environment variable
+NOTE: please open `.config.env` file to access the environment variable
 
 ## Deployment
 
