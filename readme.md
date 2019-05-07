@@ -12,7 +12,9 @@ This project uses NoSql database, mongoDB, and you can see the full details of d
 
 ## MongoDB Collections
 
-You can find mongoDB collection in screenshot and json format [MongoDB Collections](https://mhc-wellness.herokuapp.com/mongodb.pdf)
+![Sample](https://res.cloudinary.com/drovood07/image/upload/v1557213746/Mongodb_Collection_r7qmne.png)
+
+You can find full data of mongoDB collection in screenshot and json format in [MongoDB Collections](https://mhc-wellness.herokuapp.com/mongodb.pdf)
 
 ## How it works
 
@@ -29,19 +31,19 @@ by default, there are already created accounts, 2 HR and 2 Vendor users. However
 
 #### Business Processes
 
-- As a Hr Company Account
+**1. As a Hr Company Account**
 
-  - Login => Redirect to HR Dashboard
-  - Get all Events / Grouped => HR can choose event from the listed event
-  - Create a Booking => Input proposed dates (3 choices) and choosen event
-  - Get all Booked Event => Only showing booked event by specific Hr ID
+- Login => Redirect to HR Dashboard
+- Get all Events / Grouped => HR can choose event from the listed event
+- Create a Booking => Input proposed dates (3 choices) and choosen event
+- Get all Booked Event => Only showing booked event by specific Hr ID
 
-- As a Vendor
+**2. As a Vendor**
 
-  - Login => Redirect to Vendor Dashboard
-  - Create, Read, Update Event => Admin is able to create event
-  - Get all Booked event => Only showing booked event by specific Vendor ID
-  - Update status to Approved/Reject => If Vendor gives 'approved' status, Vendor will choose one of the proposed date. If Vendor gives 'rejected' status, Vendor will give the remarks on why it is rejected.
+- Login => Redirect to Vendor Dashboard
+- Create, Read, Update Event => Admin is able to create event
+- Get all Booked event => Only showing booked event by specific Vendor ID
+- Update status to Approved/Reject => If Vendor gives 'approved' status, Vendor will choose one of the proposed date. If Vendor gives 'rejected' status, Vendor will give the remarks on why it is rejected.
 
 **Hr Company Account**
 
