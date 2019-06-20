@@ -1,4 +1,4 @@
-# MHC - Wellness Event Booking Application
+# Wellness Event Booking Application
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) ![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)
 
@@ -66,7 +66,7 @@ Give a response of success status and all events in group (If event name is same
 
 Input 3 proposed dates and choosen event ID. The response will give the created booking (let default null value on "responseDate", "confirmedDate", and "remarks", it will be updated when Vendor accept/reject the book)
 
-4. Get Booking by HR ID (Only showing the booked event by specified HR ID) **plus point**
+4. Get Booking by HR ID (Only showing the booked event by specified HR ID)
 
 ![Show Booked Event](https://res.cloudinary.com/drovood07/image/upload/v1557211234/Screen_Shot_2019-05-07_at_1.40.04_PM_zjfw7k.png)
 ![Show Booked Event](https://res.cloudinary.com/drovood07/image/upload/v1557211326/Screen_Shot_2019-05-07_at_1.41.49_PM_kdifkf.png)
@@ -88,7 +88,7 @@ Give a response of success status and token (used to authorize specific task tha
 
 Give a response of success status and created event's name and vendorId will be stored.
 
-3. Get Booking by Vendor ID (Only showing the booked event by specified Vendor ID) **plus point**
+3. Get Booking by Vendor ID (Only showing the booked event by specified Vendor ID)
    ![Get Booked Event Vendor](https://res.cloudinary.com/drovood07/image/upload/v1557212475/Screen_Shot_2019-05-07_at_2.00.58_PM_zwn5nx.png)
    ![Get Booked Event Vendor res](https://res.cloudinary.com/drovood07/image/upload/v1557212555/Screen_Shot_2019-05-07_at_2.02.07_PM_gnqs4m.png)
 
