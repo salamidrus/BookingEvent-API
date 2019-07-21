@@ -107,7 +107,7 @@ This project require [NodeJS](https://nodejs.org/) to run
 To install:
 
 ```
-$ git clone git@bitbucket.org:idrusandwinata/backend.git
+$ git clone https://github.com/salamidrus/Booking-Event-Application.git
 $ cd MHC-Wellness
 $ npm install or yarn install
 $ npm start or yarn start
